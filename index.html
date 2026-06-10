@@ -1,26 +1,380 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Weihua's Homepage</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weihua Zheng - Homepage</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f7f7f7;
+    }
+
+    a {
+      color: #1f77b4;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 280px;
+      padding: 35px 25px;
+      background: #f2f4f7;
+      border-right: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 20px auto;
+      background: #ddd;
+    }
+
+    .name {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      font-size: 14px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .nav {
+      margin-top: 20px;
+    }
+
+    .nav a {
+      display: block;
+      padding: 7px 0;
+      color: #333;
+      font-size: 15px;
+    }
+
+    .nav a:hover {
+      color: #1f77b4;
+    }
+
+    .content {
+      flex: 1;
+      padding: 40px 55px;
+      box-sizing: border-box;
+    }
+
+    section {
+      margin-bottom: 45px;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-top: 0;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 24px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 8px;
+      margin-top: 30px;
+      color: #222;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .pub-list li {
+      margin-bottom: 14px;
+    }
+
+    .year {
+      font-weight: bold;
+      color: #444;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #eef3f8;
+      color: #305070;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+      margin: 3px 4px 3px 0;
+    }
+
+    .paper-title {
+      font-weight: bold;
+    }
+
+    .venue {
+      font-style: italic;
+      color: #555;
+    }
+
+    .footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      font-size: 13px;
+      color: #777;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .content {
+        padding: 30px 25px;
+      }
+
+      .nav {
+        text-align: center;
+      }
+
+      .nav a {
+        display: inline-block;
+        margin: 0 8px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Hello, I am Weihua Zheng</h1>
+  <div class="container">
 
-  <p>Welcome to my personal homepage.</p>
+    <!-- Left sidebar -->
+    <aside class="sidebar">
+      <!-- 如果你上传头像，把图片命名为 profile.jpg，并放在 assets 文件夹下 -->
+      <img src="assets/profile.jpg" alt="Weihua Zheng" class="profile-img" />
 
-  <h2>About Me</h2>
-  <p>I am interested in NLP, multilingual LLMs, AI agents, and research engineering.</p>
+      <div class="name">Weihua Zheng</div>
 
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Multilingual NLP</li>
-    <li>Large Language Models</li>
-    <li>Machine Translation</li>
-    <li>AI Agents</li>
-  </ul>
+      <div class="title">
+        Senior Research Engineer<br />
+        A*STAR, Singapore
+      </div>
 
-  <h2>Contact</h2>
-  <p>Email: your-email@example.com</p>
+      <div class="info">
+        <p>Singapore</p>
+        <p>Email: your-email [at] example [dot] com</p>
+        <p>
+          <a href="#">Google Scholar</a> |
+          <a href="#">GitHub</a> |
+          <a href="#">LinkedIn</a>
+        </p>
+      </div>
+
+      <nav class="nav">
+        <a href="#about">About Me</a>
+        <a href="#news">News</a>
+        <a href="#research">Research Interests</a>
+        <a href="#experience">Research Experiences</a>
+        <a href="#education">Education</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="content">
+
+      <section id="about">
+        <h1>Weihua Zheng</h1>
+
+        <p>
+          I am a Senior Research Engineer at A*STAR, Singapore. My research interests
+          include natural language processing, multilingual large language models,
+          machine translation, question answering, and agentic AI systems.
+        </p>
+
+        <p>
+          I am particularly interested in building multilingual and culturally-aware AI
+          systems, evaluating large language models, and developing practical NLP
+          technologies for real-world applications.
+        </p>
+      </section>
+
+      <section id="news">
+        <h2>News</h2>
+        <ul>
+          <li><span class="year">2026:</span> One paper was accepted by ACL 2026.</li>
+          <li><span class="year">2025:</span> Started working on multilingual and culturally-grounded evaluation for LLMs.</li>
+          <li><span class="year">2024:</span> Began part-time PhD studies at SUTD.</li>
+        </ul>
+      </section>
+
+      <section id="research">
+        <h2>Research Interests</h2>
+
+        <p>
+          <span class="tag">Multilingual NLP</span>
+          <span class="tag">Large Language Models</span>
+          <span class="tag">Machine Translation</span>
+          <span class="tag">Question Answering</span>
+          <span class="tag">AI Agents</span>
+          <span class="tag">Cultural Evaluation</span>
+          <span class="tag">Table QA</span>
+        </p>
+
+        <ul>
+          <li>Multilingual and cross-lingual natural language processing</li>
+          <li>Large language model evaluation and reasoning</li>
+          <li>Machine translation and low-resource language technologies</li>
+          <li>Agentic AI systems and automated research workflows</li>
+          <li>Culturally-grounded benchmark construction and evaluation</li>
+        </ul>
+      </section>
+
+      <section id="experience">
+        <h2>Research Experiences</h2>
+        <ul>
+          <li>
+            <strong>Senior Research Engineer</strong>, A*STAR, Singapore<br />
+            2019 - Present
+          </li>
+          <li>
+            <strong>Part-Time PhD Student</strong>, Singapore University of Technology and Design<br />
+            2024 - Present
+          </li>
+        </ul>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <strong>PhD</strong>, Singapore University of Technology and Design<br />
+            2024 - Present
+          </li>
+          <li>
+            <strong>Master's Degree</strong>, Nanyang Technological University, Singapore<br />
+            2018 - 2019
+          </li>
+          <li>
+            <strong>Bachelor's Degree</strong>, Wuhan University, China<br />
+            2014 - 2018
+          </li>
+        </ul>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+
+        <h3>Selected Papers</h3>
+        <ul class="pub-list">
+          <li>
+            <span class="paper-title">
+              MMA-ASIA: A Multilingual and Multimodal Alignment Framework for Culturally-Grounded Evaluation
+            </span><br />
+            Weihua Zheng, Zhengyuan Liu, Tanmoy Chakraborty, Weiwen Xu, Xiaoxue Gao, et al.<br />
+            <span class="venue">ACL, 2026.</span>
+            [<a href="#">paper</a>] [<a href="#">code</a>]
+          </li>
+
+          <li>
+            <span class="paper-title">
+              Add your paper title here
+            </span><br />
+            Author A, Author B, Weihua Zheng<br />
+            <span class="venue">Conference / Journal, Year.</span>
+            [<a href="#">paper</a>] [<a href="#">code</a>]
+          </li>
+
+          <li>
+            <span class="paper-title">
+              Add another paper title here
+            </span><br />
+            Weihua Zheng, Author A, Author B<br />
+            <span class="venue">Conference / Journal, Year.</span>
+            [<a href="#">paper</a>]
+          </li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <strong>Multilingual and Multimodal Cultural Evaluation</strong><br />
+            Building evaluation frameworks for culturally-grounded LLM assessment.
+          </li>
+
+          <li>
+            <strong>Machine Translation Systems</strong><br />
+            Developing practical English-Chinese and Chinese-English translation systems.
+          </li>
+
+          <li>
+            <strong>Agentic AI and Automated Research</strong><br />
+            Studying multi-stage agentic systems, error localization, and evaluation.
+          </li>
+        </ul>
+      </section>
+
+      <section id="services">
+        <h2>Services</h2>
+        <ul>
+          <li>Reviewer for NLP and AI conferences.</li>
+          <li>Research and engineering support for multilingual NLP projects.</li>
+        </ul>
+      </section>
+
+      <div class="footer">
+        Last updated: June 2026.
+      </div>
+
+    </main>
+  </div>
 </body>
 </html>
