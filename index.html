@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -9,9 +10,9 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
+      line-height: 1.65;
       color: #333;
-      background: #f7f7f7;
+      background: #f6f7f9;
     }
 
     a {
@@ -25,17 +26,18 @@
 
     .container {
       display: flex;
-      max-width: 1200px;
+      max-width: 1180px;
       margin: 0 auto;
-      background: white;
+      background: #ffffff;
       min-height: 100vh;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
     }
 
     .sidebar {
-      width: 280px;
+      width: 285px;
       padding: 35px 25px;
-      background: #f2f4f7;
-      border-right: 1px solid #ddd;
+      background: #f0f3f7;
+      border-right: 1px solid #dcdfe5;
       position: sticky;
       top: 0;
       height: 100vh;
@@ -43,20 +45,23 @@
     }
 
     .profile-img {
-      width: 160px;
-      height: 160px;
+      width: 165px;
+      height: 165px;
       border-radius: 50%;
       object-fit: cover;
       display: block;
       margin: 0 auto 20px auto;
       background: #ddd;
+      border: 4px solid #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
     }
 
     .name {
       text-align: center;
-      font-size: 24px;
+      font-size: 25px;
       font-weight: bold;
       margin-bottom: 8px;
+      color: #222;
     }
 
     .title {
@@ -72,8 +77,14 @@
       text-align: center;
     }
 
+    .info p {
+      margin: 8px 0;
+    }
+
     .nav {
-      margin-top: 20px;
+      margin-top: 22px;
+      border-top: 1px solid #d5d9df;
+      padding-top: 15px;
     }
 
     .nav a {
@@ -89,7 +100,7 @@
 
     .content {
       flex: 1;
-      padding: 40px 55px;
+      padding: 42px 58px;
       box-sizing: border-box;
     }
 
@@ -98,10 +109,11 @@
     }
 
     h1 {
-      font-size: 30px;
+      font-size: 32px;
       margin-top: 0;
       border-bottom: 2px solid #ddd;
       padding-bottom: 10px;
+      color: #222;
     }
 
     h2 {
@@ -114,7 +126,7 @@
 
     h3 {
       font-size: 18px;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
       color: #333;
     }
 
@@ -126,32 +138,42 @@
       margin-bottom: 8px;
     }
 
-    .pub-list li {
-      margin-bottom: 14px;
-    }
-
-    .year {
-      font-weight: bold;
-      color: #444;
-    }
-
     .tag {
       display: inline-block;
       background: #eef3f8;
       color: #305070;
-      padding: 3px 8px;
-      border-radius: 4px;
+      padding: 4px 9px;
+      border-radius: 5px;
       font-size: 13px;
-      margin: 3px 4px 3px 0;
+      margin: 4px 4px 4px 0;
+    }
+
+    .paper {
+      margin-bottom: 18px;
     }
 
     .paper-title {
       font-weight: bold;
+      color: #222;
+    }
+
+    .authors {
+      color: #444;
     }
 
     .venue {
       font-style: italic;
       color: #555;
+    }
+
+    .highlight {
+      color: #1f5f99;
+      font-weight: bold;
+    }
+
+    .small-note {
+      font-size: 13px;
+      color: #777;
     }
 
     .footer {
@@ -162,7 +184,7 @@
       color: #777;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 850px) {
       .container {
         flex-direction: column;
       }
@@ -174,7 +196,7 @@
       }
 
       .content {
-        padding: 30px 25px;
+        padding: 30px 24px;
       }
 
       .nav {
@@ -187,193 +209,268 @@
       }
     }
   </style>
+
 </head>
 
 <body>
   <div class="container">
 
-    <!-- Left sidebar -->
-    <aside class="sidebar">
-      <!-- 如果你上传头像，把图片命名为 profile.jpg，并放在 assets 文件夹下 -->
-      <img src="assets/profile.jpg" alt="Weihua Zheng" class="profile-img" />
+```
+<!-- Left sidebar -->
+<aside class="sidebar">
+  <img src="assets/profile.jpg" alt="Weihua Zheng" class="profile-img" />
 
-      <div class="name">Weihua Zheng</div>
+  <div class="name">Weihua Zheng</div>
 
-      <div class="title">
-        Senior Research Engineer<br />
-        A*STAR, Singapore
+  <div class="title">
+    Senior Research Engineer<br />
+    A*STAR, Singapore
+  </div>
+
+  <div class="info">
+    <p>Singapore</p>
+    <p>Email: zwh13006187307 [at] gmail [dot] com</p>
+    <p>
+      <a href="https://scholar.google.com/citations?user=ElEaLSgAAAAJ&amp;hl=zh-CN" target="_blank">Google Scholar</a> |
+      <a href="https://github.com/Social-AI-Studio" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/zheng-weihua-a5805617a/" target="_blank">LinkedIn</a>
+    </p>
+  </div>
+
+  <nav class="nav">
+    <a href="#about">About Me</a>
+    <a href="#news">News</a>
+    <a href="#research">Research Interests</a>
+    <a href="#publications">Publications</a>
+    <a href="#experience">Research Experience</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#service">Service</a>
+  </nav>
+</aside>
+
+<!-- Main content -->
+<main class="content">
+
+  <section id="about">
+    <h1>Weihua Zheng</h1>
+
+    <p>
+      I am a Senior Research Engineer at <span class="highlight">A*STAR, Singapore</span>.
+      My research focuses on multilingual large language models, cultural and multimodal
+      evaluation, machine translation, question answering, and agentic AI systems.
+    </p>
+
+    <p>
+      I am particularly interested in building reliable and culturally-aware AI systems
+      for multilingual and multimodal scenarios. My recent work studies how large language
+      models reason across languages, cultures, and modalities, with an emphasis on
+      evaluation, benchmark construction, and practical NLP applications.
+    </p>
+  </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <ul>
+      <li>
+        <strong>2026:</strong> <em>AdaMCoT: Rethinking Cross-Lingual Factual Reasoning Through Adaptive Multilingual Chain-of-Thought</em> appeared at AAAI 2026.
+      </li>
+      <li>
+        <strong>2026:</strong> <em>BLEnD-Vis: Benchmarking Multimodal Cultural Understanding in Vision Language Models</em> appeared at EACL 2026.
+      </li>
+      <li>
+        <strong>2025:</strong> Released work on multilingual and multimodal cultural evaluation, including <em>MMA-ASIA</em>.
+      </li>
+      <li>
+        <strong>2025:</strong> Worked on cross-lingual hallucination mitigation and multilingual reasoning with <em>CCL-XCoT</em>.
+      </li>
+    </ul>
+  </section>
+
+  <section id="research">
+    <h2>Research Interests</h2>
+
+    <p>
+      <span class="tag">Multilingual LLM</span>
+      <span class="tag">Cultural LLM</span>
+      <span class="tag">Multimodal LLM</span>
+      <span class="tag">AI Agent</span>
+      <span class="tag">Machine Translation</span>
+      <span class="tag">Cross-Lingual Reasoning</span>
+      <span class="tag">LLM Evaluation</span>
+      <span class="tag">Question Answering</span>
+    </p>
+
+    <ul>
+      <li>Multilingual and cross-lingual large language models</li>
+      <li>Culturally-grounded evaluation of LLMs and vision-language models</li>
+      <li>Multimodal benchmark construction across text, image, and speech</li>
+      <li>Cross-lingual reasoning and hallucination mitigation</li>
+      <li>Agentic AI systems and process-level evaluation</li>
+      <li>Machine translation, code-switching translation, and applied NLP systems</li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>Selected Publications</h2>
+
+    <div class="paper">
+      <div class="paper-title">
+        AdaMCoT: Rethinking Cross-Lingual Factual Reasoning Through Adaptive Multilingual Chain-of-Thought
       </div>
-
-      <div class="info">
-        <p>Singapore</p>
-        <p>Email: zwh13006187307@gmail.com</p>
-        <p>
-          <a href="https://scholar.google.com/citations?user=ElEaLSgAAAAJ&amp;hl=zh-CN" target="_blank">Google Scholar</a> |
-          <a href="https://www.linkedin.com/in/zheng-weihua-a5805617a/" target="_blank">LinkedIn</a>
-        </p>
+      <div class="authors">
+        Weihua Zheng, Xin Huang, Zhengyuan Liu, Tarun Kumar Vangani, Bowei Zou,
+        Xiyan Tao, Yuhao Wu, Ai Ti Aw, Nancy F. Chen, Roy Ka-Wei Lee
       </div>
-
-      <nav class="nav">
-        <a href="#about">About Me</a>
-        <a href="#news">News</a>
-        <a href="#research">Research Interests</a>
-        <a href="#experience">Research Experiences</a>
-        <a href="#education">Education</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
-        <a href="#services">Services</a>
-      </nav>
-    </aside>
-
-    <!-- Main content -->
-    <main class="content">
-
-      <section id="about">
-        <h1>Weihua Zheng</h1>
-
-        <p>
-          I am a Senior Research Engineer at A*STAR, Singapore. My research interests
-          include natural language processing, multilingual large language models,
-          machine translation, question answering, and agentic AI systems.
-        </p>
-
-        <p>
-          I am particularly interested in building multilingual and culturally-aware AI
-          systems, evaluating large language models, and developing practical NLP
-          technologies for real-world applications.
-        </p>
-      </section>
-
-      <section id="news">
-        <h2>News</h2>
-        <ul>
-          <li><span class="year">2026:</span> One paper was accepted by ACL 2026.</li>
-          <li><span class="year">2025:</span> Started working on multilingual and culturally-grounded evaluation for LLMs.</li>
-          <li><span class="year">2024:</span> Began part-time PhD studies at SUTD.</li>
-        </ul>
-      </section>
-
-      <section id="research">
-        <h2>Research Interests</h2>
-
-        <p>
-          <span class="tag">Multilingual NLP</span>
-          <span class="tag">Large Language Models</span>
-          <span class="tag">Machine Translation</span>
-          <span class="tag">Question Answering</span>
-          <span class="tag">AI Agents</span>
-          <span class="tag">Cultural Evaluation</span>
-          <span class="tag">Table QA</span>
-        </p>
-
-        <ul>
-          <li>Multilingual and cross-lingual natural language processing</li>
-          <li>Large language model evaluation and reasoning</li>
-          <li>Machine translation and low-resource language technologies</li>
-          <li>Agentic AI systems and automated research workflows</li>
-          <li>Culturally-grounded benchmark construction and evaluation</li>
-        </ul>
-      </section>
-
-      <section id="experience">
-        <h2>Research Experiences</h2>
-        <ul>
-          <li>
-            <strong>Senior Research Engineer</strong>, A*STAR, Singapore<br />
-            2019 - Present
-          </li>
-          <li>
-            <strong>Part-Time PhD Student</strong>, Singapore University of Technology and Design<br />
-            2024 - Present
-          </li>
-        </ul>
-      </section>
-
-      <section id="education">
-        <h2>Education</h2>
-        <ul>
-          <li>
-            <strong>PhD</strong>, Singapore University of Technology and Design<br />
-            2024 - Present
-          </li>
-          <li>
-            <strong>Master's Degree</strong>, Nanyang Technological University, Singapore<br />
-            2018 - 2019
-          </li>
-          <li>
-            <strong>Bachelor's Degree</strong>, Wuhan University, China<br />
-            2014 - 2018
-          </li>
-        </ul>
-      </section>
-
-      <section id="publications">
-        <h2>Publications</h2>
-
-        <h3>Selected Papers</h3>
-        <ul class="pub-list">
-          <li>
-            <span class="paper-title">
-              MMA-ASIA: A Multilingual and Multimodal Alignment Framework for Culturally-Grounded Evaluation
-            </span><br />
-            Weihua Zheng, Zhengyuan Liu, Tanmoy Chakraborty, Weiwen Xu, Xiaoxue Gao, et al.<br />
-            <span class="venue">ACL, 2026.</span>
-            [<a href="#">paper</a>] [<a href="#">code</a>]
-          </li>
-
-          <li>
-            <span class="paper-title">
-              Add your paper title here
-            </span><br />
-            Author A, Author B, Weihua Zheng<br />
-            <span class="venue">Conference / Journal, Year.</span>
-            [<a href="#">paper</a>] [<a href="#">code</a>]
-          </li>
-
-          <li>
-            <span class="paper-title">
-              Add another paper title here
-            </span><br />
-            Weihua Zheng, Author A, Author B<br />
-            <span class="venue">Conference / Journal, Year.</span>
-            [<a href="#">paper</a>]
-          </li>
-        </ul>
-      </section>
-
-      <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-          <li>
-            <strong>Multilingual and Multimodal Cultural Evaluation</strong><br />
-            Building evaluation frameworks for culturally-grounded LLM assessment.
-          </li>
-
-          <li>
-            <strong>Machine Translation Systems</strong><br />
-            Developing practical English-Chinese and Chinese-English translation systems.
-          </li>
-
-          <li>
-            <strong>Agentic AI and Automated Research</strong><br />
-            Studying multi-stage agentic systems, error localization, and evaluation.
-          </li>
-        </ul>
-      </section>
-
-      <section id="services">
-        <h2>Services</h2>
-        <ul>
-          <li>Reviewer for NLP and AI conferences.</li>
-          <li>Research and engineering support for multilingual NLP projects.</li>
-        </ul>
-      </section>
-
-      <div class="footer">
-        Last updated: June 2026.
+      <div class="venue">AAAI 2026</div>
+      <div>
+        [<a href="https://arxiv.org/abs/2501.16154" target="_blank">paper</a>]
+        [<a href="https://github.com/Social-AI-Studio/AdaMCoT" target="_blank">code</a>]
       </div>
+    </div>
 
-    </main>
+    <div class="paper">
+      <div class="paper-title">
+        BLEnD-Vis: Benchmarking Multimodal Cultural Understanding in Vision Language Models
+      </div>
+      <div class="authors">
+        Bryan Chen Zhengyu Tan, Weihua Zheng, Zhengyuan Liu, Nancy F. Chen,
+        Hwaran Lee, Kenny Tsu Wei Choo, Roy Ka-Wei Lee
+      </div>
+      <div class="venue">EACL 2026</div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-title">
+        MMA-ASIA: A Multilingual and Multimodal Alignment Framework for Culturally-Grounded Evaluation
+      </div>
+      <div class="authors">
+        Weihua Zheng, Zhengyuan Liu, Tanmoy Chakraborty, Weiwen Xu, Xiaoxue Gao,
+        Bryan Chen Zhengyu Tan, Bowei Zou, Chang Liu, Yujia Hu, Xing Xie,
+        Xiaoyuan Yi, Jing Yao, Chaojun Wang, Long Li, Rui Liu, Huiyao Liu,
+        Koji Inoue, Ryuichi Sumida, Tatsuya Kawahara, Fan Xu, Lingyu Ye,
+        Wei Tian, Dongjun Kim, Jimin Jung, Jaehyung Seo, Nadya Yuki Wangsajaya,
+        Pham Minh Duc, Ojasva Saxena, Palash Nandi, Xiyan Tao, Wiwik Karlina,
+        Tuan Luong, Keertana Arun Vasan, Roy Ka-Wei Lee, Nancy F. Chen
+      </div>
+      <div class="venue">arXiv, 2025</div>
+      <div>
+        [<a href="https://arxiv.org/abs/2510.08608" target="_blank">paper</a>]
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-title">
+        CCL-XCoT: An Efficient Cross-Lingual Knowledge Transfer Method for Mitigating Hallucination Generation
+      </div>
+      <div class="authors">
+        Weihua Zheng, Roy Ka-Wei Lee, Zhengyuan Liu, Kui Wu, AiTi Aw, Bowei Zou
+      </div>
+      <div class="venue">arXiv, 2025</div>
+      <div>
+        [<a href="https://arxiv.org/abs/2507.14239" target="_blank">paper</a>]
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-title">
+        Bridging Linguistic Gaps: Cross-Lingual Mapping in Pre-Training and Dataset for Enhanced Multilingual LLM Performance
+      </div>
+      <div class="authors">
+        Weihua Zheng, Chang Liu, Zhengyuan Liu, Xin Huang, Kui Wu,
+        Muhammad Huzaifah Md Shahrin, Aiti Aw, Roy Ka-Wei Lee
+      </div>
+      <div class="venue">arXiv, 2026</div>
+      <div>
+        [<a href="https://arxiv.org/abs/2604.10590" target="_blank">paper</a>]
+      </div>
+    </div>
+
+    <p class="small-note">
+      For the complete and up-to-date publication list, please see my Google Scholar profile.
+    </p>
+  </section>
+
+  <section id="experience">
+    <h2>Research Experience</h2>
+
+    <ul>
+      <li>
+        <strong>Senior Research Engineer</strong>, A*STAR, Singapore<br />
+        2019 - Present
+      </li>
+      <li>
+        <strong>Part-Time PhD Student</strong>, Singapore University of Technology and Design<br />
+        2024 - Present
+      </li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+
+    <ul>
+      <li>
+        <strong>PhD</strong>, Singapore University of Technology and Design<br />
+        2024 - Present
+      </li>
+      <li>
+        <strong>Master's Degree</strong>, Nanyang Technological University, Singapore<br />
+        2018 - 2019
+      </li>
+      <li>
+        <strong>Bachelor's Degree</strong>, Wuhan University, China<br />
+        2014 - 2018
+      </li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Selected Projects</h2>
+
+    <ul>
+      <li>
+        <strong>Multilingual and Multimodal Cultural Evaluation</strong><br />
+        Constructing benchmarks and evaluation protocols for culturally-grounded LLM
+        and multimodal model assessment.
+      </li>
+
+      <li>
+        <strong>Cross-Lingual Reasoning and Hallucination Mitigation</strong><br />
+        Studying how multilingual LLMs transfer factual knowledge and reasoning ability
+        across high-resource and low-resource languages.
+      </li>
+
+      <li>
+        <strong>Machine Translation and Applied NLP Systems</strong><br />
+        Developing practical translation and NLP systems for real-world multilingual
+        communication scenarios.
+      </li>
+
+      <li>
+        <strong>Agentic AI and Evaluation</strong><br />
+        Exploring process-level evaluation, error localization, and reliability analysis
+        for multi-stage AI systems.
+      </li>
+    </ul>
+  </section>
+
+  <section id="service">
+    <h2>Academic Service</h2>
+
+    <ul>
+      <li>Reviewer for NLP and AI conferences.</li>
+      <li>Research and engineering support for multilingual NLP and LLM projects.</li>
+    </ul>
+  </section>
+
+  <div class="footer">
+    Last updated: June 2026.
+  </div>
+
+</main>
+```
+
   </div>
 </body>
 </html>
