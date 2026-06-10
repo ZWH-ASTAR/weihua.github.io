@@ -7,6 +7,27 @@
   <title>Weihua Zheng - Homepage</title>
 
   <style>
+    .news-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .news-list li {
+      margin-bottom: 12px;
+      padding-left: 0;
+    }
+    
+    .news-badge {
+      display: inline-block;
+      background: #1f77b4;
+      color: white;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -280,21 +301,29 @@
 
   <section id="news">
     <h2>News</h2>
-    <ul>
+  
+    <ul class="news-list">
       <li>
+        <span class="news-badge">NEWS</span>
         <strong>2025:</strong> Our work on multilingual LLM hallucination mitigation under
         the National Multimodal LLM Programme was accepted to EMNLP 2025.
       </li>
+  
       <li>
+        <span class="news-badge">NEWS</span>
         <strong>2024:</strong> Worked on LLM safety and multilingual knowledge transfer in
         collaboration with Korea University.
       </li>
+  
       <li>
+        <span class="news-badge">NEWS</span>
         <strong>2023–2024:</strong> Built and deployed social media translation engines for
         Malay-to-English, Chinese-to-English, and Tamil-to-English under the Online Trust and
         Safety Research Programme.
       </li>
+  
       <li>
+        <span class="news-badge">NEWS</span>
         <strong>2019–Present:</strong> Served as technical lead for Singapore Translate
         Together, developing and maintaining the translation models and backend application.
       </li>
