@@ -149,12 +149,13 @@
     }
 
     .paper {
-      margin-bottom: 18px;
+      margin-bottom: 22px;
     }
 
     .paper-title {
       font-weight: bold;
       color: #222;
+      font-size: 17px;
     }
 
     .authors {
@@ -164,6 +165,7 @@
     .venue {
       font-style: italic;
       color: #555;
+      margin: 4px 0 8px 0;
     }
 
     .highlight {
@@ -232,7 +234,7 @@
     <p>Email: zwh13006187307 [at] gmail [dot] com</p>
     <p>
       <a href="https://scholar.google.com/citations?user=ElEaLSgAAAAJ&amp;hl=zh-CN" target="_blank">Google Scholar</a> |
-      <a href="https://github.com/Social-AI-Studio" target="_blank">GitHub</a> |
+      <a href="https://github.com/ZWH-ASTAR" target="_blank">GitHub</a> |
       <a href="https://www.linkedin.com/in/zheng-weihua-a5805617a/" target="_blank">LinkedIn</a>
     </p>
   </div>
@@ -242,9 +244,9 @@
     <a href="#news">News</a>
     <a href="#research">Research Interests</a>
     <a href="#publications">Publications</a>
+    <a href="#projects">Projects</a>
     <a href="#experience">Research Experience</a>
     <a href="#education">Education</a>
-    <a href="#projects">Projects</a>
     <a href="#service">Service</a>
   </nav>
 </aside>
@@ -262,6 +264,13 @@
     </p>
 
     <p>
+      My work spans both research and applied NLP system development. I have contributed
+      to real-world multilingual translation systems, operational text understanding
+      systems, and recent research on multilingual LLMs, cultural evaluation, multimodal
+      reasoning, LLM safety, and agentic AI evaluation.
+    </p>
+
+    <p>
       I am particularly interested in building reliable and culturally-aware AI systems
       for multilingual and multimodal scenarios. My recent work studies how large language
       models reason across languages, cultures, and modalities, with an emphasis on
@@ -273,16 +282,21 @@
     <h2>News</h2>
     <ul>
       <li>
-        <strong>2026:</strong> <em>AdaMCoT: Rethinking Cross-Lingual Factual Reasoning Through Adaptive Multilingual Chain-of-Thought</em> appeared at AAAI 2026.
+        <strong>2025:</strong> Our work on multilingual LLM hallucination mitigation under
+        the National Multimodal LLM Programme was accepted to EMNLP 2025.
       </li>
       <li>
-        <strong>2026:</strong> <em>BLEnD-Vis: Benchmarking Multimodal Cultural Understanding in Vision Language Models</em> appeared at EACL 2026.
+        <strong>2024:</strong> Worked on LLM safety and multilingual knowledge transfer in
+        collaboration with Korea University.
       </li>
       <li>
-        <strong>2025:</strong> Released work on multilingual and multimodal cultural evaluation, including <em>MMA-ASIA</em>.
+        <strong>2023–2024:</strong> Built and deployed social media translation engines for
+        Malay-to-English, Chinese-to-English, and Tamil-to-English under the Online Trust and
+        Safety Research Programme.
       </li>
       <li>
-        <strong>2025:</strong> Worked on cross-lingual hallucination mitigation and multilingual reasoning with <em>CCL-XCoT</em>.
+        <strong>2019–Present:</strong> Served as technical lead for Singapore Translate
+        Together, developing and maintaining the translation models and backend application.
       </li>
     </ul>
   </section>
@@ -299,6 +313,7 @@
       <span class="tag">Cross-Lingual Reasoning</span>
       <span class="tag">LLM Evaluation</span>
       <span class="tag">Question Answering</span>
+      <span class="tag">LLM Safety</span>
     </p>
 
     <ul>
@@ -307,7 +322,7 @@
       <li>Multimodal benchmark construction across text, image, and speech</li>
       <li>Cross-lingual reasoning and hallucination mitigation</li>
       <li>Agentic AI systems and process-level evaluation</li>
-      <li>Machine translation, code-switching translation, and applied NLP systems</li>
+      <li>Machine translation, social media translation, and applied NLP systems</li>
     </ul>
   </section>
 
@@ -326,6 +341,19 @@
       <div>
         [<a href="https://arxiv.org/abs/2501.16154" target="_blank">paper</a>]
         [<a href="https://github.com/Social-AI-Studio/AdaMCoT" target="_blank">code</a>]
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-title">
+        CCL-XCoT: An Efficient Cross-Lingual Knowledge Transfer Method for Mitigating Hallucination Generation
+      </div>
+      <div class="authors">
+        Weihua Zheng, Roy Ka-Wei Lee, Zhengyuan Liu, Kui Wu, AiTi Aw, Bowei Zou
+      </div>
+      <div class="venue">EMNLP 2025</div>
+      <div>
+        [<a href="https://arxiv.org/abs/2507.14239" target="_blank">paper</a>]
       </div>
     </div>
 
@@ -361,19 +389,6 @@
 
     <div class="paper">
       <div class="paper-title">
-        CCL-XCoT: An Efficient Cross-Lingual Knowledge Transfer Method for Mitigating Hallucination Generation
-      </div>
-      <div class="authors">
-        Weihua Zheng, Roy Ka-Wei Lee, Zhengyuan Liu, Kui Wu, AiTi Aw, Bowei Zou
-      </div>
-      <div class="venue">arXiv, 2025</div>
-      <div>
-        [<a href="https://arxiv.org/abs/2507.14239" target="_blank">paper</a>]
-      </div>
-    </div>
-
-    <div class="paper">
-      <div class="paper-title">
         Bridging Linguistic Gaps: Cross-Lingual Mapping in Pre-Training and Dataset for Enhanced Multilingual LLM Performance
       </div>
       <div class="authors">
@@ -391,17 +406,160 @@
     </p>
   </section>
 
+  <section id="projects">
+    <h2>Selected Projects</h2>
+
+    <div class="paper">
+      <div class="paper-title">
+        Singapore Translate Together
+      </div>
+      <div class="venue">Jul 2019 – Present</div>
+
+      <p>
+        SG Translate Together (SGTT) is Singapore’s public translation web portal powered by
+        the government’s SG Translate neural machine translation engine. It provides
+        bi-directional, Singapore-context translations across the four official languages:
+        English, Chinese, Malay, and Tamil.
+      </p>
+
+      <p>
+        The platform was developed jointly by MDDI, formerly MCI, and A*STAR’s I²R, with
+        support from the TRANS Grant. SGTT also aggregates translation resources and community
+        initiatives for Singapore’s multilingual society.
+      </p>
+
+      <p>
+        I served as the technical lead for this project, responsible for developing the
+        translation models and the backend application. I continue to maintain the entire
+        translation engine stack.
+      </p>
+
+      <p>
+        <span class="tag">Machine Translation</span>
+        <span class="tag">Large Language Models</span>
+        <span class="tag">Backend Development</span>
+        <span class="tag">Model Deployment</span>
+        <span class="tag">Multilingual NLP</span>
+      </p>
+    </div>
+
+    <div class="paper">
+      <div class="paper-title">
+        National Multimodal LLM Programme
+      </div>
+      <div class="venue">Jun 2024 – Jun 2025</div>
+
+      <p>
+        I was involved in a sub-project under the Research Pillar of Singapore’s National
+        Multimodal LLM Programme. In this project, we formed an academic collaboration with
+        Korea University to advance research on large language model safety.
+      </p>
+
+      <p>
+        We introduced a novel and efficient approach for mitigating hallucinations in
+        multilingual LLMs by promoting knowledge transfer between high-resource and
+        low-resource languages. This work has been accepted to EMNLP 2025.
+      </p>
+
+      <p>
+        <span class="tag">Large Language Models</span>
+        <span class="tag">LLM Safety</span>
+        <span class="tag">Multilingual LLM</span>
+        <span class="tag">Hallucination Mitigation</span>
+        <span class="tag">Python</span>
+        <span class="tag">PyTorch</span>
+      </p>
+    </div>
+
+    <div class="paper">
+      <div class="paper-title">
+        Online Trust and Safety (OTS) Research Programme
+      </div>
+      <div class="venue">Apr 2023 – Apr 2024</div>
+
+      <p>
+        The Online Trust and Safety (OTS) Research Programme is a funding initiative from
+        the Ministry of Digital Development and Information (MDDI). It is part of the Smart
+        Nation and Digital Economy domain of the Research, Innovation and Enterprise 2025
+        programme administered by the National Research Foundation.
+      </p>
+
+      <p>
+        The programme aims to develop technological capabilities to combat online harms and
+        align translation efforts with high-impact use cases.
+      </p>
+
+      <p>
+        I served as the developer for the Social Media Translation Engines in this project,
+        building and deploying Malay-to-English, Chinese-to-English, and Tamil-to-English
+        translation engines specialized for social media content.
+      </p>
+
+      <p>
+        <span class="tag">Machine Translation</span>
+        <span class="tag">Social Media Translation</span>
+        <span class="tag">Malay-to-English</span>
+        <span class="tag">Chinese-to-English</span>
+        <span class="tag">Tamil-to-English</span>
+        <span class="tag">Python</span>
+      </p>
+    </div>
+
+    <div class="paper">
+      <div class="paper-title">
+        Multilingual and Cultural LLM Evaluation
+      </div>
+
+      <p>
+        I work on multilingual, multimodal, and culturally-grounded evaluation for large
+        language models and vision-language models. My recent research studies how LLMs
+        reason across languages, cultures, and modalities, with a focus on benchmark
+        construction, cultural alignment, and robustness evaluation.
+      </p>
+
+      <p>
+        <span class="tag">Cultural LLM</span>
+        <span class="tag">Multimodal LLM</span>
+        <span class="tag">Benchmark Construction</span>
+        <span class="tag">LLM Evaluation</span>
+        <span class="tag">Cross-Lingual Reasoning</span>
+      </p>
+    </div>
+
+    <div class="paper">
+      <div class="paper-title">
+        Agentic AI and Process-Level Evaluation
+      </div>
+
+      <p>
+        I study multi-stage agentic systems, including process-level reliability,
+        error localization, tool-use evaluation, and reasoning trace analysis.
+        My interest is in understanding not only whether an AI system produces the
+        correct final answer, but also where and why errors occur during the reasoning
+        or tool-use process.
+      </p>
+
+      <p>
+        <span class="tag">AI Agents</span>
+        <span class="tag">Process Evaluation</span>
+        <span class="tag">Error Localization</span>
+        <span class="tag">Tool Use</span>
+        <span class="tag">LLM Evaluation</span>
+      </p>
+    </div>
+  </section>
+
   <section id="experience">
     <h2>Research Experience</h2>
 
     <ul>
       <li>
         <strong>Senior Research Engineer</strong>, A*STAR, Singapore<br />
-        2019 - Present
+        2019 – Present
       </li>
       <li>
         <strong>Part-Time PhD Student</strong>, Singapore University of Technology and Design<br />
-        2024 - Present
+        2024 – Present
       </li>
     </ul>
   </section>
@@ -412,45 +570,15 @@
     <ul>
       <li>
         <strong>PhD</strong>, Singapore University of Technology and Design<br />
-        2024 - Present
+        2024 – Present
       </li>
       <li>
         <strong>Master's Degree</strong>, Nanyang Technological University, Singapore<br />
-        2018 - 2019
+        2018 – 2019
       </li>
       <li>
         <strong>Bachelor's Degree</strong>, Wuhan University, China<br />
-        2014 - 2018
-      </li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Selected Projects</h2>
-
-    <ul>
-      <li>
-        <strong>Multilingual and Multimodal Cultural Evaluation</strong><br />
-        Constructing benchmarks and evaluation protocols for culturally-grounded LLM
-        and multimodal model assessment.
-      </li>
-
-      <li>
-        <strong>Cross-Lingual Reasoning and Hallucination Mitigation</strong><br />
-        Studying how multilingual LLMs transfer factual knowledge and reasoning ability
-        across high-resource and low-resource languages.
-      </li>
-
-      <li>
-        <strong>Machine Translation and Applied NLP Systems</strong><br />
-        Developing practical translation and NLP systems for real-world multilingual
-        communication scenarios.
-      </li>
-
-      <li>
-        <strong>Agentic AI and Evaluation</strong><br />
-        Exploring process-level evaluation, error localization, and reliability analysis
-        for multi-stage AI systems.
+        2014 – 2018
       </li>
     </ul>
   </section>
@@ -460,7 +588,7 @@
 
     <ul>
       <li>Reviewer for NLP and AI conferences.</li>
-      <li>Research and engineering support for multilingual NLP and LLM projects.</li>
+      <li>Research and engineering support for multilingual NLP, machine translation, and LLM projects.</li>
     </ul>
   </section>
 
